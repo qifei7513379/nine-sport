@@ -1,0 +1,1397 @@
+/*初始化  reset*/
+
+body,
+button,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+td,
+ul {
+	margin: 0;
+	padding: 0
+}
+
+body,
+button,
+input {
+	font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', \5b8b\4f53, sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+	font-size: 100%
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+a {
+	text-decoration: none
+}
+
+/*a:hover {
+	text-decoration: underline
+}*/
+
+fieldset,
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+	/*IE/7/6*/
+}
+
+
+/*indexCSS*/
+
+
+/*index头部样式*/
+
+.header-top {
+	width: 100%;
+	height: 0.9rem;
+	background-color: white;
+}
+
+.header-top-middle {
+	width: 92%;
+	height: 0.9rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header-top-middle img{
+	display: block;
+	float: left;
+}
+
+.header-top-middle a img{
+	width: 1.8rem;
+}
+
+.header-top-middle .postion01 {
+	display: block;
+	float: left;
+	background: url(../img/position-1.png) no-repeat 10%;
+	height: 0.3rem;
+	font-size: 0.24rem;
+	color: black;
+	line-height: 0.3rem;
+	text-indent: 0.3rem;
+	margin-top: 0.3rem;
+	margin-left: 0.1rem;
+}
+
+.header-top-middle .banner-right-icon{
+	float: right;
+	margin-top: 0.3rem;
+}
+
+
+
+.city-list {
+	width: 100%;
+	background-color: rgb(245, 243, 244);
+	
+}
+
+.city-list1 {
+	/*width: 92%;*/
+	overflow: hidden;
+}
+
+.city-list1 li {
+	float: left;
+	/*width: 1rem;*/
+	height: 0.4rem;
+	line-height: 0.4rem;
+	margin-right: 0.1rem;
+}
+
+.city-list1 li a {
+	color: black;
+	font-size: 0.24rem;
+}
+
+.city-list-middle {
+	width: 92%;
+	margin: 0 auto;
+}
+
+
+
+/*index内容样式*/
+
+.swiper01 {
+	width: 100%;
+	height: 3.4rem;
+}
+
+
+/*轮播01*/
+
+
+/* flexslider */
+
+.flexslider {
+	position: relative;
+	width: 100%;
+	height: 3.4rem;
+	overflow: hidden;
+	/*min-width:1200px ;*/
+}
+
+.slides {
+	position: relative;
+	z-index: 1;
+}
+
+.slides li {
+	height: 3.4rem;
+	transition: all 0.3s ease 0s;
+}
+
+.slides li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size:auto 100%  !important;
+}
+
+
+
+.flex-control-nav {
+	position: absolute;
+	bottom: 0.1rem;
+	z-index: 2;
+	width: 100%;
+	text-align: center;
+}
+
+.flex-control-nav li {
+	display: inline-block;
+	width: 0.34rem;
+	height: 0.14rem;
+	margin: 0 0.05rem;
+	display: inline;
+	zoom: 1;
+}
+
+.flex-control-nav a {
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.04rem;
+	line-height: 0.4rem;
+	overflow: hidden;
+	background-color: rgb(255,255,255);
+	opacity: 0.5;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	cursor: pointer;
+}
+
+.flex-control-nav .flex-active {
+	background-color: rgb(220,33,76);
+}
+
+
+/*翻页*/
+
+.flex-direction-nav {
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	top: 45%;
+}
+
+.flex-direction-nav li a {
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	overflow: hidden;
+	cursor: pointer;
+	position: absolute;
+}
+
+.class {
+	width: 92%;
+	height: 8.3rem;
+	margin: 0 auto;
+}
+
+.class img{
+	width: 100%;
+	height: 100%;
+}
+
+.class ul {
+	/*width: 95%;*/
+	height: 8.3rem;
+	width: 105%;
+}
+
+.class ul li {
+	float: left;
+	width: 45%;
+	height: 3.67rem;
+	overflow: hidden;
+	margin-right: 0.3rem;
+	margin-top: 0.5rem;
+	position: relative;
+}
+
+
+.class-info {
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	width: 3.3rem;
+	height: 0.55rem;
+	background-color: rgba(0,0,0,0.5);	
+	color: white;
+	font-size: 0.24rem;
+	line-height: 0.55rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+
+
+.show {
+	width: 100%;
+	/*height: 350px;*/
+	background-color: rgb(246, 246, 246);
+}
+
+.show-head {
+	margin: 0 auto;
+	width: 92%;
+	height: 0.12rem;
+	font-size: 0.36rem;
+	color: black;
+	font-weight: bold;
+	padding-top: 0.6rem;
+}
+
+.show-head img{
+	display: block;
+	float: left;
+}
+
+.show-head .tel02{
+	 background:url(../img/tel-01.png) no-repeat;
+	 float: right;
+	 padding-left: 0.6rem;
+	 padding-bottom: 0.1rem;
+}
+
+
+.show table {
+	margin: 0 auto;
+	min-width: 92%;
+}
+
+.show table th {
+	background-color: rgb(245, 214, 210);
+	font-size: 0.24rem;
+	color: #cb241e;
+	line-height: 0.42rem;
+	
+}
+
+.show table td {
+	text-align: center;
+	background-color: rgb(238, 238, 238);
+	font-size: 0.24rem;
+	line-height: 0.42rem;
+	
+}
+
+.sign-up {
+	width: 100%;
+	min-width: 92%;
+	height: 4rem;
+	background:url(../img/bg-01.png) no-repeat rgb(246, 246, 246) center;
+	/*background-position-y: 100%;*/
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+
+.sign-up table{
+	margin: 0 auto;
+}
+
+
+
+.sign-up table th{
+	font-size: 0.24rem;
+	color: white;
+	height: 0.1rem;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
+}
+
+.sign-up table td{
+	/*height: 0.5rem;*/
+	/*width: 3.35rem;*/
+	text-align: center;
+	
+}
+
+.sign-up input {
+	width: 82%;
+	height: 0.5rem;
+	padding-left: 0.24rem;
+	font-size: 0.24rem;
+	margin: 0.2rem;
+}
+
+.sign-up table .shenqing {
+	background-color: rgb(203, 36, 30);
+	border: none;
+	color: white;
+	font-size: 0.18rem;
+	cursor:pointer;
+	width: 50%;
+}
+
+.title01 {
+	width: 100%;
+	height: 1rem;
+}
+
+.title01-middle {
+	margin: 0 auto;
+	width: 92%;
+	height: 1rem;
+	display: table;
+}
+
+.title01 h2 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 0.5rem;
+	font-size: 0.3rem;
+}
+
+.banner01 {
+	width: 100%;
+	height: 6.1rem;
+	min-width: 92%;
+	background:url(../img/bg-02.png) no-repeat center;
+	background-size: auto 100% !important;
+	position: relative;
+}
+
+.banner01 div{
+	position: absolute;
+	color: white;
+	font-size: 0.28rem;
+	margin-left: 50%;
+}
+
+.banner01 .banneer-info01{
+	top: 0.5rem;
+	left: 1.1rem;
+}
+
+.banner01 .banneer-info02{
+	top: 1.45rem;
+	left: 0.8rem;
+}
+
+.banner01 .banneer-info03{
+	top: 2.4rem;
+	left: 0.5rem;
+}
+
+.banner01 .banneer-info04{
+	top: 3.35rem;
+	left: 0.2rem;
+}
+
+.banner01 .banneer-info05{
+	top: 4.3rem;
+	left: -0.1rem;
+}
+
+.banner01 .banneer-info06{
+	top: 5.25rem;
+	left: -0.4rem;
+}
+
+.swiper02 {
+	width: 100%;
+	
+	background-color: rgb(245, 243, 244);
+}
+
+.swiper02-title{
+	width: 92%;
+	height: 1.7rem;
+	margin: 0 auto;
+	display: table;
+}
+
+.swiper02-title h2{
+	color: black;
+	font-size: 0.3rem;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*index轮播02*/
+
+.case { width:92%; height:5.25rem; margin:0px auto;}
+
+/*******************************************/
+/* inner */
+.btn_bg {position:relative; width:100%; float:right; overflow:hidden; height:5.25rem; top:0px; position:relative; }
+.case_in { position:relative; width:92%; padding:0 0.14rem; float:right; height:2.4rem; margin-top:0.09rem;}
+#inner2{  position:relative;width:98%; float:right;}
+#carousel2 div{float:left; width:4.25rem; height:4.25rem; margin-right: 0.2rem;overflow: hidden; -moz-border-radius-bottomleft: 5%;
+	-webkit-border-bottom-left-radius: 5%;border-bottom-left-radius: 5%; -moz-border-radius-topright: 5%;
+	-webkit-border-top-right-radius: 5%;border-top-right-radius: 5%;}
+#carousel2 div img{display:block; width: 100%;height: 100%;}
+#carousel2 div em{ text-align:center; display:block; margin-top:0.15rem; font-size:0.14rem; color:#ffffff;}
+#pager2{text-align:center;margin-top:0.2rem;color:#666;}
+#pager2 a{color:#666;text-decoration:none;display:inline-block;padding:0.05rem 0.1rem;}
+#pager2 a:hover{color:#333;}
+#pager2 a.selected{background-color:#333;color:#ccc;}
+#prev2, #next2{display:block;width:0.3rem;height:0.95rem; position:absolute;top:1.8rem;z-index:2; }
+#prev2{ left:-0.3rem;background: url(../img/left-01.png) no-repeat rgba(244,244,244,0);}
+#next2{right:-0.24rem; background:url(../img/right-01.png) no-repeat rgba(244,244,244,0);}
+
+
+
+
+
+
+/*index底部样式*/
+.footer{
+	background-color: rgb(203,36,30);
+}
+
+.footer-list{
+	overflow: hidden;
+	width: 3rem;
+	margin: 0 auto;
+}
+
+.footer-list a{
+	font-size: 0.32rem;
+	color: white;
+	float: left;
+	padding-right: 0.2rem;
+	padding-left: 0.2rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+
+.footer-support {
+	width: 100%;
+	font-size: 0.24rem;
+	color: white;
+}
+
+.footer-support-middle {
+	width: 92%;
+	margin: 0 auto;
+	display: table;
+}
+
+.footer-support-middle span{
+	text-align: center;
+	display: block;
+	line-height: 0.42rem;
+}
+
+.footer .goTopBtn{
+	border-left: 0.02rem solid white;
+}
+
+
+
+
+/*师资概况*/
+
+.title-banner{
+	width: 100%;
+	height: 216px;
+	background: url(../img/title-banner-bg01_02.png) no-repeat center;
+	display: table;
+}
+
+.title-banner .title-banner-text{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.title-banner-text01{
+	font-size: 30px;
+	font-family: 方正兰亭超细黑简体;
+	color: white;
+	opacity: 0.5;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.title-banner-text02{
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+}
+
+
+
+/*师资概况内容*/
+
+.content{
+	background-color: rgb(244,244,244);
+}
+
+.content-head{
+	
+	width: 100%;
+	
+}
+
+.content-head-middle{
+	margin: 0 auto;
+	width: 92%;
+	height: 0.6rem;
+}
+
+.tab-list{
+	width: 100%;
+	background-color: white;
+}
+
+.tab-list ul{
+	overflow: hidden;
+}
+
+.tab-list ul li{
+	float: left;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.66rem;
+}
+
+.tab-list-curriculum ul li{
+	width: 25%;
+}
+
+.tab-list-teacher ul li{
+	width: 50%;
+}
+
+.tab-list ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: black;
+}
+
+.tab-list .tab-list-active{
+	border-bottom: 0.04rem solid rgb(203,36,30);
+	color: rgb(203,36,30);
+}
+
+
+.content-head-middle-right{
+	float: left;
+	font-size: 0.2rem;	
+	height: 0.6rem;
+	color: rgb(153,153,153);
+	line-height: 0.6rem;
+}
+
+
+
+.content-article-img{
+	margin: 0 auto;
+	width: 100%;
+	height: 3.57rem;
+	display: block;
+}
+
+.content-article-text{
+	margin: 0 auto;
+	
+	padding: 0.2rem;
+}
+
+.content-article-text p{
+	text-indent: 0.6rem;
+	font-size: 0.24rem;
+	line-height: 0.5rem;
+	margin-bottom: 0.3rem;
+}
+
+.content-article{
+	width: 92%;
+	margin: 0 auto;
+}
+
+.content-article-curriculum-basics li{
+	overflow: hidden;
+	background-color: white;
+	padding: 0.2rem;
+	
+	margin-bottom: 0.2rem;
+}
+
+
+
+ .curriculum-title{
+	float: left;
+	font-size: 0.24rem;
+	line-height: 0.5rem;
+	font-weight: bold;
+	padding-bottom: 0.2rem;
+}
+
+ .curriculum-content{
+ 	border-top: 1px solid rgb(242,242,242);
+	float: right;	
+	margin-bottom: 0.2rem;
+	font-size: 0.24rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+
+
+.content-article .score-list{
+	margin: 0 auto;
+	font-size: 14px;
+	padding-bottom: 50px;
+}
+
+.content-article .score-list caption{
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.content-article .score-list th{
+	background-color: rgb(228,228,228);
+	width: 130px;
+	height: 40px;
+}
+
+.content-article .score-list td{
+	background-color: rgb(228,228,228);
+	width: 130px;
+	height: 40px;
+}
+
+.content-article .score-list td{
+	text-align: center;
+}
+
+.content-article .teacher-list{
+	overflow: hidden;
+	width: 1260px;
+}
+
+.content-article .field-list{
+	overflow: hidden;
+	width: 106%;
+}
+
+.content-article .field-list>li{
+	float: left;
+	width: 45.7%;
+	height: 4.38rem;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;
+	background-color: white;
+}
+
+.content-article .field-list>li a{
+	color: black;
+}
+
+
+.content-article .case-list{
+	overflow: hidden;
+	width: 1260px;
+}
+
+.content-article .case-list li{
+	float: left;
+	width: 390px;
+	height: 390px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	background-color: white;
+}
+
+.content-article .case-list li a{
+	color: black;
+}
+
+
+.content-article .teacher-list li{
+	float: left;
+	width: 260px;
+	height: 420px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	background-color: white;
+}
+
+.content-article-about-up{
+	width: 100%;
+	overflow: hidden;
+	background-color: white;
+}
+
+
+
+
+.about-up-content{
+	width: 100%;
+	
+	/*height: 440px;*/
+	float: right;
+	
+}
+
+.content-article-about-down{
+	width: 100%;
+	padding: 0.4rem 0;
+	
+}
+
+.about-up-content-title{
+	margin: 0.2rem 0.4rem;
+	font-size: 0.3rem;
+	color: #cb241e;
+}
+
+.about-up-content-p{
+	margin: 0.2rem 0.4rem;
+	font-size: 0.24rem;
+	line-height: 0.4rem;
+	text-indent: 0.4rem;
+}
+
+.content-article-about-down ul{
+	width: 100%;
+	overflow: hidden;
+}
+
+.content-article-about-down ul li{
+	float: left;
+	width: 44%;
+	height: 3.45rem;
+	/*margin-right:0.2rem;*/
+	margin-left: 0.25rem;
+	margin-bottom: 0.2rem;
+	background-color: white;
+}
+
+.about-down-l01{
+	background: url(../img/about-down-01.png) no-repeat center;
+	background-position-y: 30%;
+	background-size: 30%;
+}
+
+.about-down-l02{
+	background: url(../img/about-down-02.png) no-repeat center;
+	background-position-y: 30%;
+		background-size: 30%;
+}
+
+.about-down-l03{
+	background: url(../img/about-down-03.png) no-repeat center;
+	background-position-y: 30%;
+		background-size: 30%;
+}
+
+.about-down-l04{
+	background: url(../img/about-down-04.png) no-repeat center;
+	background-position-y: 30%;
+		background-size: 30%;
+}
+
+.about-down-title{
+	text-align: center;
+	font-size: 0.24rem;
+	margin-top: 1.8rem;
+	font-weight: bold;
+}
+
+.about-down-introduce{
+	text-align: center;
+	font-size: 0.2rem;
+	color:#999;
+	margin-top: 0.2rem;
+}
+
+.service-bg01{
+	width: 100%;
+	/*height: 1450px;*/
+	background: url(../img/service-bg01.png) no-repeat center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+ .service-content{
+	background-color:white ;
+}
+
+.service-content-head{
+	background-color: rgb(244,244,244);
+}
+
+.service-bg01 ul {
+	width: 100%;
+	/*margin: 0 atuo;*/
+	height: 9.77rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.service-bg01 ul li{
+	width: 43%;
+	position: absolute;
+	margin-left: 50%;
+}
+
+.service-li01{
+	top: 4%;
+	left: -40%;
+}
+
+.service-li02{
+	top: 1.9rem;
+}
+
+.service-li03{
+	top: 3.4rem;
+	left: -40%;
+}
+
+.service-li04{
+	top: 5rem;
+}
+
+.service-li05{
+	top: 6.6rem;
+	left: -40%;
+}
+
+.service-li06{
+	top: 8.2rem;
+}
+
+.service-bg01-title{
+	font-size: 24px;
+	color: #cb241e;
+	font-weight: bold;
+}
+
+.service-bg01-content{
+	font-size: 12px;
+	
+}
+
+ .field-photo{
+	width: 100%;
+	height: 2.3rem;	
+	margin-bottom:0.2rem;	
+}
+
+.field-name{
+	font-size: 0.24rem;
+	font-weight: bold;
+	text-indent: 0.2rem;
+	line-height: 0.30rem;
+}
+
+.content-article .field-list ul{
+	padding-left: 0.8rem;
+}
+
+.content-article .field-list ul li{
+	font-size: 0.2rem;
+	text-indent: -0.6rem;
+	line-height: 0.3rem;
+	/*height: 0.3rem;*/
+	/*overflow: hidden;*/
+	margin-bottom: 0;
+}
+
+
+
+ .case-photo{
+	width: 100%;
+	height: 260px;	
+	display: block;
+	margin-bottom:20px;	
+}
+
+.case-list .case-name{
+	font-size: 14px;
+	font-weight: bold;
+	text-indent: 28px;
+	line-height: 28px;
+}
+
+.case-list .case-name:hover{
+	color: rgb(203,36,30);
+}
+
+.content-article .case-list li ul li{
+	height: 24px;
+	font-size: 14px;
+	text-indent: 28px;
+	line-height: 24px;
+	margin-bottom: 0;
+}
+
+.content-article-banner{
+	width: 100%;
+	height: 260px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.content-article-test{
+	width: 100%;
+	
+	margin-top: 10px;
+	margin-bottom:10px;
+	background-color:rgb(244,244,244);
+	
+}
+
+.case-title{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.content-article-banner-img{
+	width: 390px;
+	height: 260px;
+	display: block;
+	float: left;
+	
+}
+
+.content-article-banner-details{
+	float: left;
+	font-size: 14px;
+}
+
+.content-article-banner-details ul{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+.content-article-banner-details ul li{
+	line-height: 30px;
+}
+
+.content-article-banner-details .case-banner01{
+	font-weight: bold;
+}
+
+.content-article-test table {
+	margin: 0 auto;
+	
+}
+
+.content-article-test table th {
+	background-color: rgb(245, 214, 210);
+	font-size: 16px;
+	color: #cb241e;
+	height: 42px;
+}
+
+.content-article-test table td {
+	text-align: center;
+	background-color: rgb(238, 238, 238);
+	font-size: 16px;
+	height: 42px;
+}
+
+
+ .teacher-photo{
+	width: 160px;
+	height: 160px;
+	border: 1px solid rgb(203,36,30);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	display: block;
+	margin-top: 40px;
+	margin-left: 50px;
+	margin-bottom:20px;	
+}
+
+.content-article .teacher-list li a{
+	color: black;
+	
+}
+
+.teacher-name{
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.teacher-job{
+	text-align: center;
+	font-size: 14px;
+}
+
+.teacher-introduce{
+	font-size: 14px;
+	text-indent: 24px;
+	padding: 17px;
+}
+
+
+
+/*分页*/
+
+/*CSS Digg style pagination*/
+
+DIV.meneame {
+	PADDING-RIGHT: 0.03rem;
+	PADDING-LEFT: 0.03rem;
+	FONT-SIZE: 0.24rem;
+	PADDING-BOTTOM: 0.03rem;
+	MARGIN: 0.03rem;
+	COLOR: black;
+	PADDING-TOP: 0.03rem;
+	TEXT-ALIGN: center;
+	padding-bottom: 0.2rem;
+}
+
+DIV.meneame A {
+	/*BORDER-RIGHT: #ff9600 1px solid;*/
+	PADDING-RIGHT: 0.2rem;
+	BACKGROUND-POSITION: 50% bottom;
+	/*BORDER-TOP: #ff9600 1px solid;*/
+	PADDING-LEFT: 0.2rem;
+	
+	PADDING-BOTTOM: 0.05rem;
+	/*BORDER-LEFT: #ff9600 1px solid;*/
+	COLOR: black;
+	MARGIN-RIGHT: 0.03rem;
+	PADDING-TOP: 0.05rem;
+	/*BORDER-BOTTOM: #ff9600 1px solid;*/
+	TEXT-DECORATION: none;
+	border: 1px solid rgb(221,221,221);
+}
+
+
+
+DIV.meneame A:active {
+	BORDER-RIGHT: rgb(203,36,30) 0.01rem solid;
+	BORDER-TOP: rgb(203,36,30) 0.01rem solid;
+	BACKGROUND-IMAGE: none;
+	BORDER-LEFT: rgb(203,36,30) 0.01rem solid;
+	COLOR: white;
+	BORDER-BOTTOM: rgb(203,36,30) 0.01rem solid;
+	BACKGROUND-COLOR: rgb(203,36,30);
+	
+}
+
+DIV.meneame SPAN.current {
+	BORDER-RIGHT: rgb(203,36,30) 0.01rem solid;
+	PADDING-RIGHT: 0.2rem;
+	BORDER-TOP: rgb(203,36,30) 0.01rem solid;
+	PADDING-LEFT: 0.2rem;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 0.05rem;
+	BORDER-LEFT: rgb(203,36,30) 0.01rem solid;
+	COLOR: white;
+	MARGIN-RIGHT: 0.03rem;
+	PADDING-TOP: 0.05rem;
+	BORDER-BOTTOM: rgb(203,36,30) 0.01rem solid;
+	BACKGROUND-COLOR: rgb(203,36,30);
+}
+
+DIV.meneame SPAN.disabled {
+	/*BORDER-RIGHT: darkgrey 1px solid;*/
+	PADDING-RIGHT: 0.07rem;
+	/*BORDER-TOP: darkgrey 1px solid;*/
+	PADDING-LEFT: 0.07rem;
+	PADDING-BOTTOM: 0.05rem;
+	/*BORDER-LEFT: darkgray 1px solid;*/
+	COLOR: white;
+	MARGIN-RIGHT: 0.05rem;
+	PADDING-TOP: 0.05rem;
+	background-color: rgb(204,204,204);
+	/*BORDER-BOTTOM: darkgray 1px solid*/
+}
+
+
+/*弹出层样式*/
+
+.reveal-modal-bg {
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				z-index: 100;
+				display: none;
+				top: 0;
+				left: 0;
+				background: rgba(00, 00, 00, 0.8)
+			}
+			
+			.reveal-modal {
+				visibility: hidden;
+				top: 150px;
+				left: 50%;
+				margin-left: -300px;
+				width: 484px;
+				position: absolute;
+				z-index: 101;
+				padding: 30px 40px 34px;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+				-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+				-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+				background-color: #FFF;
+			}
+			
+			.reveal-modal.small {
+				width: 200px;
+				margin-left: -140px;
+			}
+			
+			.reveal-modal.medium {
+				width: 400px;
+				margin-left: -240px;
+			}
+			
+			.reveal-modal.large {
+				width: 600px;
+				margin-left: -340px;
+			}
+			
+			.reveal-modal.xlarge {
+				width: 800px;
+				margin-left: -440px;
+			}
+			
+			.reveal-modal .close-reveal-modal {
+				font-size: 22px;
+				line-height: 0.5;
+				position: absolute;
+				top: 8px;
+				right: 11px;
+				color: #333;
+				text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+				font-weight: bold;
+				cursor: pointer;
+			}
+			
+		.reveal-modal .teacher-photo{
+			margin: 0 auto;
+			margin-bottom: 10px;
+		}
+
+		.reveal-modal .field-photo{
+			margin: 0 auto;
+			padding-bottom: 0.1rem;
+		}	
+			
+		.reveal-modal .field-name{
+			text-align: center;
+			margin-left: 0;
+		}
+			
+			body {
+				background-color: #F2F2F2;
+			}
+		
+		
+		/*侧边栏*/
+		
+		
+		
+.sidenav {
+	margin-top: 0.9rem;
+	background: rgb(203,36,30);
+	box-shadow: 0.02rem 0.02rem 0.06rem rgba(0, 0, 0, .3);
+	display: block;
+	font-size: 0.16rem;
+	font-weight: 400;
+	height: 100%;
+	right: 0;
+	position: fixed;
+	overflow: auto;
+	transform: translate(101%, 0);
+	transition: transform .3s;
+	top: 0;
+	width: 50%;
+	z-index: 100
+}
+
+.sidenav.show {
+	transform: translate(0, 0)
+}
+
+.sidenav-brand {
+	background: #FF5722;
+	border-bottom: 0.01rem solid #FF7043;
+	color: #FAFAFA;
+	font-size: 0.24rem;
+	font-weight: 700;
+	line-height: 0.32rem;
+	padding: 0.2rem 0.24rem 0.19rem;
+}
+
+.sidenav-dropdown,
+.sidenav-header {
+	border-bottom: 0.01rem solid #424242;
+	margin: 0
+}
+
+.sidenav-header {
+	background: 0 0;
+	color: #757575;
+	font-size: 0.192rem;
+	line-height: 0.32rem;
+	padding: 0.16rem 0.24rem 0.15rem;
+}
+
+.sidenav-header small {
+	display: block;
+	font-size: 0.144rem;
+	line-height: 0.16rem;
+}
+
+.sidenav-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+.sidenav-menu li {
+	display: block;
+	position: relative;
+	border-bottom:1px solid white ;
+}
+
+.sidenav-menu a {
+	background: 0 0;
+	color: white;
+	display: block;
+	font-weight: 400;
+	line-height: 0.94rem;
+	text-indent: 0.6rem;
+	text-decoration: none
+}
+
+
+
+.sidenav-menu a.active,
+.sidenav-menu a.active .sidenav-dropdown-icon,
+.sidenav-menu a.active .sidenav-link-icon {
+	color: #FAFAFA
+}
+
+
+
+.sidenav-link-title {
+	display: block;
+	padding: 0 0.16rem 0 0.4rem;
+	font-size: 0.32rem;
+}
+
+.sidenav-dropdown {
+	display: none;
+	list-style: none;
+	padding: 0
+}
+
+.sidenav-dropdown li{
+	background-color: white
+}
+
+.sidenav-dropdown a {
+	/*background: #191919;*/
+	padding-left: 0.72rem;
+	font-size: 0.28rem;
+	color: black;
+}
+
+
+
+.sidenav-dropdown li:first-child a {
+	box-shadow: inset 0 0.01rem 0.01rem rgba(0, 0, 0, .1)
+}
+
+
+
+.sidenav-overlay {
+	background: rgba(0, 0, 0, .6);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	margin-top: 0.9rem;
+}
+
+.sidenav-no-scroll {
+	overflow: hidden!important
+}	
