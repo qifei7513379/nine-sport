@@ -92,28 +92,32 @@ button {
 	background-color: white;
 }
 
-.header-top-middle {
-	width: 92%;
+.header-top {	
 	height: 0.9rem;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
-.header-top-middle img{
+.header-top>img{
+	display: block;
+	float: left;
+	height: 0.4rem;
+	margin-top:0.25rem;
+}
+
+.header-top a img{
+	height: 0.9rem;
 	display: block;
 	float: left;
 }
 
-.header-top-middle a img{
-	width: 1.8rem;
-}
-
-.header-top-middle .postion01 {
+.header-top .postion01 {
 	display: block;
 	float: left;
-	background: url(../img/position-1.png) no-repeat 10%;
-	height: 0.3rem;
-	font-size: 0.24rem;
+	background: url(../img/position-1.png) no-repeat ;
+	background-size: 20% auto;
+	height: 0.35rem;
+	font-size: 0.3rem;
 	color: black;
 	line-height: 0.3rem;
 	text-indent: 0.3rem;
@@ -121,9 +125,16 @@ button {
 	margin-left: 0.1rem;
 }
 
-.header-top-middle .banner-right-icon{
+.header-top .banner-right-icon{
 	float: right;
+	width: 0.9rem;
+	height: 0.9rem;
+}
+
+.header-top .banner-right-icon img{
+	height: 0.3rem;
 	margin-top: 0.3rem;
+	margin-left: 0.3rem;
 }
 
 
@@ -145,10 +156,14 @@ button {
 	height: 0.4rem;
 	line-height: 0.4rem;
 	margin-right: 0.1rem;
+	padding: 0.05rem;
 }
 
 .city-list1 li a {
 	color: black;
+	display: block;
+	width: 100%;
+	height: 100%;
 	font-size: 0.24rem;
 }
 
@@ -166,95 +181,39 @@ button {
 	height: 3.4rem;
 }
 
+#swiper1{
+	height: 3.4rem;
+}
 
 /*轮播01*/
 
-
-/* flexslider */
-
-.flexslider {
-	position: relative;
-	width: 100%;
-	height: 3.4rem;
-	overflow: hidden;
-	/*min-width:1200px ;*/
-}
-
-.slides {
-	position: relative;
-	z-index: 1;
-}
-
-.slides li {
-	height: 3.4rem;
-	transition: all 0.3s ease 0s;
-}
-
-.slides li a {
+#swiper1 .swiper-wrapper .swiper-slide a{
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-size:auto 100%  !important;
+	background-size: auto 100% !important;
 }
 
-
-
-.flex-control-nav {
-	position: absolute;
-	bottom: 0.1rem;
-	z-index: 2;
-	width: 100%;
-	text-align: center;
-}
-
-.flex-control-nav li {
-	display: inline-block;
-	width: 0.34rem;
-	height: 0.14rem;
-	margin: 0 0.05rem;
-	display: inline;
-	zoom: 1;
-}
-
-.flex-control-nav a {
-	display: inline-block;
+.swiper-pagination .swiper-pagination-bullet{
 	width: 0.5rem;
 	height: 0.04rem;
-	line-height: 0.4rem;
-	overflow: hidden;
 	background-color: rgb(255,255,255);
-	opacity: 0.5;
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-	cursor: pointer;
+	opacity: 0.6;
+	border: none;
+	border-radius: unset;
 }
 
-.flex-control-nav .flex-active {
-	background-color: rgb(220,33,76);
+.swiper-pagination .swiper-pagination-bullet-active{
+	background-color: #dc214c;
 }
 
-
-/*翻页*/
-
-.flex-direction-nav {
-	position: absolute;
-	z-index: 3;
-	width: 100%;
-	top: 45%;
-}
-
-.flex-direction-nav li a {
-	display: block;
-	width: 0.5rem;
-	height: 0.5rem;
-	overflow: hidden;
-	cursor: pointer;
-	position: absolute;
-}
 
 .class {
-	width: 92%;
+	width: 100%;
 	height: 8.3rem;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
+	padding-top: 0.3rem;
+	background-color: white;
 }
 
 .class img{
@@ -262,19 +221,20 @@ button {
 	height: 100%;
 }
 
-.class ul {
-	/*width: 95%;*/
-	height: 8.3rem;
-	width: 105%;
+.class ul {	
+	height: 8.22rem;
+	margin: 0 auto;
+	width: 92%;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
 }
 
 .class ul li {
-	float: left;
-	width: 45%;
-	height: 3.67rem;
-	overflow: hidden;
-	margin-right: 0.3rem;
-	margin-top: 0.5rem;
+	width: 47.8%;
+	height: 3.66rem;
+	overflow: hidden;	
 	position: relative;
 }
 
@@ -282,8 +242,8 @@ button {
 .class-info {
 	position: absolute;
 	bottom: 0;
-	left: 0px;
-	width: 3.3rem;
+	left: 0;
+	width: 100%;
 	height: 0.55rem;
 	background-color: rgba(0,0,0,0.5);	
 	color: white;
@@ -299,30 +259,30 @@ button {
 
 .show {
 	width: 100%;
-	/*height: 350px;*/
 	background-color: rgb(246, 246, 246);
 }
 
 .show-head {
 	margin: 0 auto;
 	width: 92%;
-	height: 0.12rem;
 	font-size: 0.36rem;
 	color: black;
 	font-weight: bold;
-	padding-top: 0.6rem;
+	overflow: hidden;
+	padding-bottom: 0.3rem;
 }
 
 .show-head img{
 	display: block;
 	float: left;
+	height: 0.66rem;
 }
 
 .show-head .tel02{
 	 background:url(../img/tel-01.png) no-repeat;
 	 float: right;
-	 padding-left: 0.6rem;
-	 padding-bottom: 0.1rem;
+	 padding-left: 0.6rem;	 
+	 height: 0.68rem;
 }
 
 
@@ -335,7 +295,7 @@ button {
 	background-color: rgb(245, 214, 210);
 	font-size: 0.24rem;
 	color: #cb241e;
-	line-height: 0.42rem;
+	line-height: 0.78rem;
 	
 }
 
@@ -343,56 +303,65 @@ button {
 	text-align: center;
 	background-color: rgb(238, 238, 238);
 	font-size: 0.24rem;
-	line-height: 0.42rem;
+	line-height: 0.6rem;
 	
 }
 
 .sign-up {
 	width: 100%;
-	min-width: 92%;
 	height: 4rem;
 	background:url(../img/bg-01.png) no-repeat rgb(246, 246, 246) center;
-	/*background-position-y: 100%;*/
+	background-size:auto 100%;
 	overflow: hidden;
-	margin-top: 0.2rem;
+	margin-top: 0.4rem;
+	
 }
 
-.sign-up table{
-	margin: 0 auto;
-}
-
-
-
-.sign-up table th{
-	font-size: 0.24rem;
+.sign-up-title{
+	font-size: 0.3rem;
 	color: white;
-	height: 0.1rem;
-	padding-top: 0.4rem;
-	padding-bottom: 0.4rem;
-}
-
-.sign-up table td{
-	/*height: 0.5rem;*/
-	/*width: 3.35rem;*/
+	margin: 0.4rem auto;
 	text-align: center;
 	
 }
 
+.sign-up ul{
+	width: 92%;
+	margin: 0 auto;
+	display: flex;
+	display:-webkit-flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.sign-up ul li{
+	width:48.55%;
+}
+
 .sign-up input {
-	width: 82%;
+	width: 93%;
 	height: 0.5rem;
 	padding-left: 0.24rem;
 	font-size: 0.24rem;
-	margin: 0.2rem;
+	margin-bottom: 0.3rem;
+	
 }
 
-.sign-up table .shenqing {
+.sign-up ul li:nth-child(5){
+	margin: 0.36rem auto;
+}
+
+.sign-up  .shenqing {
+	padding: 0;
+	margin: 0;
 	background-color: rgb(203, 36, 30);
 	border: none;
 	color: white;
-	font-size: 0.18rem;
+	font-size: 0.24rem;
 	cursor:pointer;
-	width: 50%;
+	width: 100%;
+	
+	
 }
 
 .title01 {
@@ -418,7 +387,6 @@ button {
 .banner01 {
 	width: 100%;
 	height: 6.1rem;
-	min-width: 92%;
 	background:url(../img/bg-02.png) no-repeat center;
 	background-size: auto 100% !important;
 	position: relative;
@@ -433,44 +401,43 @@ button {
 
 .banner01 .banneer-info01{
 	top: 0.5rem;
-	left: 1.1rem;
+	left: 14.67%;
 }
 
 .banner01 .banneer-info02{
 	top: 1.45rem;
-	left: 0.8rem;
+	left: 10.67%;
 }
 
 .banner01 .banneer-info03{
 	top: 2.4rem;
-	left: 0.5rem;
+	left: 6.67%;
 }
 
 .banner01 .banneer-info04{
 	top: 3.35rem;
-	left: 0.2rem;
+	left: 2.67%;
 }
 
 .banner01 .banneer-info05{
 	top: 4.3rem;
-	left: -0.1rem;
+	left: -2%;
 }
 
 .banner01 .banneer-info06{
 	top: 5.25rem;
-	left: -0.4rem;
+	left: -5.33%;
 }
 
 .swiper02 {
-	width: 100%;
-	
+	width: 100%;	
 	background-color: rgb(245, 243, 244);
+	position: relative;
 }
 
 .swiper02-title{
-	width: 92%;
+	width: 100%;
 	height: 1.7rem;
-	margin: 0 auto;
 	display: table;
 }
 
@@ -482,52 +449,75 @@ button {
 	vertical-align: middle;
 }
 
-/*index轮播02*/
+.swiper02-box{
+	position: relative;
+}
 
-.case { width:92%; height:5.25rem; margin:0 auto;}
-
-/*******************************************/
-/* inner */
-.btn_bg {position:relative; width:100%; float:right; overflow:hidden; height:5.25rem; top:0; position:relative; }
-.case_in { position:relative; width:92%; padding:0 0.14rem; float:right; height:2.4rem; margin-top:0.09rem;}
-#inner2{  position:relative;width:98%; float:right;}
-#carousel2 div{float:left; width:4.25rem; height:4.25rem; margin-right: 0.2rem;overflow: hidden; -moz-border-radius-bottomleft: 5%;
-	-webkit-border-bottom-left-radius: 5%;border-bottom-left-radius: 5%; -moz-border-radius-topright: 5%;
-	-webkit-border-top-right-radius: 5%;border-top-right-radius: 5%;}
-#carousel2 div img{display:block; width: 100%;height: 100%;}
-#carousel2 div em{ text-align:center; display:block; margin-top:0.15rem; font-size:0.14rem; color:#ffffff;}
-#pager2{text-align:center;margin-top:0.2rem;color:#666;}
-#pager2 a{color:#666;text-decoration:none;display:inline-block;padding:0.05rem 0.1rem;}
-#pager2 a:hover{color:#333;}
-#pager2 a.selected{background-color:#333;color:#ccc;}
-#prev2, #next2{display:block;width:0.3rem;height:0.95rem; position:absolute;top:1.8rem;z-index:2; }
-#prev2{ left:-0.3rem;background: url(../img/left-01.png) no-repeat rgba(244,244,244,0);}
-#next2{right:-0.24rem; background:url(../img/right-01.png) no-repeat rgba(244,244,244,0);}
+#swiper2{
+	width: 4.25rem;
+	height: 4.25rem;
+	margin-bottom: 0.4rem;
+	
+}
 
 
 
+#swiper2 .swiper-wrapper div{	
+	/*height: 4.25rem;*/
+	height: 100%;
+	width: 100%;
+	border-bottom-left-radius: 5%;
+	border-top-right-radius: 5%;
+	overflow: hidden;
+	
+}
 
+#swiper2 .swiper-wrapper a{
+	display: block;	
+	height: 100%;	
+	width: 100%;
+}
+
+#swiper2 .swiper-wrapper a img{
+	display: block;	
+	height: 100%;
+}
+
+.swiper02  .swiper-button-prev{
+	top: 1.795rem;
+	left: 0.4rem;
+	margin: 0 auto;
+	width: 0.2rem;
+	height: 0.66rem;
+	background: url(../img/left-01.png) no-repeat;
+}
+
+.swiper02  .swiper-button-next{
+	top: 1.795rem;
+	right: 0.4rem;
+	margin: 0 auto;
+	width: 0.2rem;
+	height: 0.66rem;
+	background: url(../img/right-01.png) no-repeat;
+}
 
 
 /*index底部样式*/
 .footer{
 	background-color: rgb(203,36,30);
+	
 }
 
-.footer-list{
-	overflow: hidden;
-	width: 3rem;
+
+
+.footer>a{
+	display: block;
 	margin: 0 auto;
-}
-
-.footer-list a{
+	width: 1.32rem;
 	font-size: 0.32rem;
 	color: white;
-	float: left;
-	padding-right: 0.2rem;
-	padding-left: 0.2rem;
-	margin-top: 0.1rem;
-	margin-bottom: 0.1rem;
+	padding-top: 0.2rem;
+	margin-bottom: 0.2rem;
 }
 
 .footer-support {
@@ -545,12 +535,13 @@ button {
 .footer-support-middle span{
 	text-align: center;
 	display: block;
-	line-height: 0.42rem;
+	line-height: 0.4rem;
 }
 
-.footer .goTopBtn{
-	border-left: 0.02rem solid white;
+.footer .footer-support-middle span:nth-child(2){
+	line-height: 0.8rem;
 }
+
 
 
 
@@ -633,6 +624,7 @@ button {
 	width: 100%;
 	height: 100%;
 	color: black;
+	font-family: HiraginoSansGB;
 }
 
 .tab-list .tab-list-active{
@@ -643,10 +635,22 @@ button {
 
 .content-head-middle-right{
 	float: left;
-	font-size: 0.2rem;	
+	font-size: 0.24rem;	
 	height: 0.6rem;
-	color: rgb(153,153,153);
 	line-height: 0.6rem;
+}
+
+.content-head-middle-right  {
+	overflow: hidden;
+}
+
+.content-head-middle-right  dd{
+	float: left;
+	
+}
+
+.content-head-middle-right  dd a{
+	color: rgb(153,153,153);
 }
 
 
@@ -659,8 +663,7 @@ button {
 }
 
 .content-article-text{
-	margin: 0 auto;
-	
+	margin: 0 auto;	
 	padding: 0.2rem;
 }
 
@@ -688,7 +691,7 @@ button {
 
  .curriculum-title{
 	float: left;
-	font-size: 0.24rem;
+	font-size: 0.3rem;
 	line-height: 0.5rem;
 	font-weight: bold;
 	padding-bottom: 0.2rem;
@@ -707,7 +710,7 @@ button {
 
 .content-article .score-list{
 	margin: 0 auto;
-	font-size: 0.2rem;
+	font-size: 0.24rem;
 	padding-bottom: 0.5rem;
 	width: 100%;
 }
@@ -734,57 +737,88 @@ button {
 	text-align: center;
 }
 
-.content-article .teacher-list{
-	overflow: hidden;
-	width: 102%;
+
+.teacher-article{
+	width: 100%;
 }
 
-.content-article .field-list{
-	overflow: hidden;
-	width: 106%;
-}
-
-.content-article .field-list>li{
-	float: left;
-	width: 45.7%;
-	height: 4.38rem;
-	margin-right: 0.2rem;
-	margin-bottom: 0.2rem;
-	background-color: white;
-}
-
-.content-article .field-list>li a{
+.teacher-article .teacher-list li a{
 	color: black;
+	
 }
 
-
-.content-article .case-list{
-	overflow: hidden;
-	width: 102%;
-}
-
-.content-article .case-list>li{
-	float: left;
-	width: 46%;
-	height: 4.38rem;
-	margin-right: 0.2rem;
-	margin-bottom: 0.2rem;
-	background-color: white;
-}
-
-.content-article .case-list>li a{
-	color: black;
-}
-
-
-.content-article .teacher-list li{
-	float: left;
-	width: 47%;
+.teacher-article .teacher-list li{
+	
+	width: 48.5%;
 	height: 3.25rem;
-	margin-right: 0.2rem;
+	
 	margin-bottom: 0.4rem;
 	background-color: white;
 }
+
+
+.teacher-article .teacher-list{
+	overflow: hidden;
+	margin: 0 auto;
+	width: 95%;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.field-article .field-list{
+	margin: 0 auto;
+	width: 95%;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	
+}
+
+.field-article .field-list>li{
+	
+	width: 48.6%;
+	height: 4.38rem;
+	
+	margin-bottom: 0.2rem;
+	background-color: white;
+}
+
+.field-article .field-list>li a{
+	color: black;
+}
+
+.case-article{
+	width: 100%;
+}
+
+.case-article .case-list{
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	
+}
+
+.case-article .case-list>li{
+	
+	width: 48.6%;
+	height: 4.38rem;
+	
+	margin-bottom: 0.2rem;
+	background-color: white;
+}
+
+.case-article .case-list>li a{
+	color: black;
+}
+
+
+
 
 .content-article-about-up{
 	width: 100%;
@@ -796,8 +830,7 @@ button {
 
 
 .about-up-content{
-	width: 100%;
-	
+	width: 100%;	
 	float: right;
 	
 }
@@ -822,17 +855,20 @@ button {
 }
 
 .content-article-about-down ul{
-	width: 100%;
-	overflow: hidden;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	
 }
 
 .content-article-about-down ul li{
-	float: left;
-	width: 44%;
+	
+	width: 46.1%;
 	height: 3.45rem;
-	/*margin-right:0.2rem;*/
-	margin-left: 0.25rem;
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.4rem;	
 	background-color: white;
 }
 
@@ -862,21 +898,20 @@ button {
 
 .about-down-title{
 	text-align: center;
-	font-size: 0.24rem;
+	font-size: 0.3rem;
 	margin-top: 1.8rem;
 	font-weight: bold;
 }
 
 .about-down-introduce{
 	text-align: center;
-	font-size: 0.2rem;
+	font-size: 0.26rem;
 	color:#999;
 	margin-top: 0.2rem;
 }
 
 .service-bg01{
 	width: 100%;
-
 	background: url(../img/service-bg01.png) no-repeat center;
 	background-size: 100% 100%;
 	overflow: hidden;
@@ -892,7 +927,6 @@ button {
 
 .service-bg01 ul {
 	width: 100%;
-	/*margin: 0 atuo;*/
 	height: 9.77rem;
 	overflow: hidden;
 	position: relative;
@@ -905,12 +939,12 @@ button {
 }
 
 .service-li01{
-	top: 4%;
+	top: 0.2rem;
 	left: -40%;
 }
 
 .service-li02{
-	top: 1.9rem;
+	top: 1.8rem;
 }
 
 .service-li03{
@@ -938,7 +972,7 @@ button {
 }
 
 .service-bg01-content{
-	font-size: 0.12rem;
+	font-size: 0.24rem;
 	
 }
 
@@ -946,26 +980,28 @@ button {
 	width: 100%;
 	height: 2.3rem;	
 	display: block;
-	margin-bottom:0.2rem;	
+	
 }
 
 .field-name{
-	font-size: 0.24rem;
+	font-size: 0.26rem;
 	font-weight: bold;
 	text-indent: 0.2rem;
-	line-height: 0.30rem;
+	line-height: 0.5rem;
 }
 
-.content-article .field-list ul{
+.field-article{
+	width: 100%;
+}
+
+.field-article .field-list ul{
 	padding-left: 0.8rem;
 }
 
-.content-article .field-list ul li{
-	font-size: 0.2rem;
+.field-article .field-list ul li{
+	font-size: 0.24rem;
 	text-indent: -0.6rem;
 	line-height: 0.3rem;
-	/*height: 0.3rem;*/
-	/*overflow: hidden;*/
 	margin-bottom: 0;
 }
 
@@ -979,7 +1015,7 @@ button {
 }
 
 .case-list .case-name{
-	font-size: 0.24rem;
+	font-size: 0.3rem;
 	font-weight: bold;
 	text-indent: 0.2rem;
 	line-height: 0.3rem;
@@ -987,9 +1023,9 @@ button {
 }
 
 
-.content-article .case-list li ul li{
+.case-article .case-list li ul li{
 
-	font-size: 0.2rem;
+	font-size: 0.26rem;
 	text-indent: 0.2rem;
 	line-height: 0.4rem;
 	margin-bottom: 0;
@@ -1014,7 +1050,7 @@ button {
 .case-title{
 	font-size: 0.24rem;
 	font-weight: bold;
-	line-height: 0.4rem;
+	line-height: 0.6rem;
 }
 
 .content-article-banner-img{
@@ -1026,8 +1062,9 @@ button {
 }
 
 .content-article-banner-details{
-	float: left;
-	font-size: 0.2rem;
+	padding-top: 0.2rem;
+	padding-left: 42%;
+	font-size: 0.24rem;
 }
 
 .content-article-banner-details ul{
@@ -1041,7 +1078,7 @@ button {
 
 .content-article-banner-details .case-banner01{
 	font-weight: bold;
-	font-size: 0.24rem;
+	font-size: 0.26rem;
 }
 
 .content-article-test table {
@@ -1070,7 +1107,7 @@ button {
 
 .space01{
 	width: 100%;
-	height: 2rem;
+	height: 3.5rem;
 }
 
 
@@ -1084,16 +1121,13 @@ button {
 	margin: 0.3rem auto;
 }
 
-.content-article .teacher-list li a{
-	color: black;
-	
-}
+
 
 .teacher-name{
 	text-align: center;
-	font-size: 0.24rem;
+	font-size: 0.26rem;
 	font-weight: bold;
-	line-height: 0.3rem;
+	line-height: 0.4rem;
 }
 
 .teacher-job{
@@ -1102,10 +1136,13 @@ button {
 }
 
 .teacher-introduce{
+	margin-top: 0.2rem;
 	padding: 0.2rem;
 	font-size: 0.24rem;
 	text-indent: 0.48rem;
+	height: 4rem;
 	color: #666666;
+	overflow: scroll;
 }
 
 
@@ -1196,49 +1233,48 @@ DIV.meneame SPAN.disabled {
 				display: none;
 				top: 0;
 				left: 0;
-				background: rgba(00, 00, 00, 0.8)
+				background: rgba(00, 00, 00, 0.8);
+				overflow-y:visible
 			}
-			
-			.reveal-modal {
-				visibility: hidden;
+.reveal-modal {
+				display: none;
 				top: 3.4rem;
-				left: 50%;
-				margin-left: -3rem;
+				left: 18%;				
 				width: 64%;
-				position: absolute;
+				position: fixed;
 				z-index: 101;
-				padding: 0.3rem 0.4rem 0.34rem;
-				
+				padding: 0.3rem 0.4rem 0.34rem;				
 				border-radius: 0.05rem;
 				-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 				-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 				-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 				background-color: #FFF;
-			}
+				 box-sizing: border-box;
+}
 			
-			.reveal-modal.small {
+.reveal-modal.small {
 				width: 2rem;
 				margin-left: -1.4rem;
-			}
+}
 			
-			.reveal-modal.medium {
+.reveal-modal.medium {
 				width: 4rem;
 				margin-left: -2.4rem;
-			}
+}
 			
-			.reveal-modal.large {
+.reveal-modal.large {
 				width: 6rem;
 				margin-left: -3.4rem;
-			}
+}
 			
-			.reveal-modal.xlarge {
+.reveal-modal.xlarge {
 				width: 8rem;
 				margin-left: -4.4rem;
-			}
+}
 			
-			.reveal-modal .close-reveal-modal {
-				font-size: 0.22rem;
-				line-height: 0.5;
+.reveal-modal .close-reveal-modal {
+				font-size: 0.5rem;
+				line-height: 0.5rem;
 				position: absolute;
 				top: 0.08rem;
 				right: 0.11rem;
@@ -1246,29 +1282,20 @@ DIV.meneame SPAN.disabled {
 				text-shadow: 0 -0.01rem 0.01rem rbga(0, 0, 0, .6);
 				font-weight: bold;
 				cursor: pointer;
-			}
+}
 			
-		.reveal-modal .teacher-photo{
+.reveal-modal .teacher-photo{
 			margin: 0 auto;
 			margin-bottom: 0.2rem;
-		}
+}
 
-		.reveal-modal .field-photo{
-			margin: 0 auto;
-			padding-bottom: 0.1rem;
-		}	
-			
-		.reveal-modal .field-name{
-			text-align: center;
-			margin-left: 0;
-		}
-			
-			body {
-				background-color: #F2F2F2;
-			}
+
 		
 		
-		/*侧边栏*/
+
+
+
+/*侧边栏*/
 		
 		
 		
@@ -1277,7 +1304,6 @@ DIV.meneame SPAN.disabled {
 	background: rgb(203,36,30);
 	box-shadow: 0.02rem 0.02rem 0.06rem rgba(0, 0, 0, .3);
 	display: block;
-	font-size: 0.16rem;
 	font-weight: 400;
 	height: 100%;
 	right: 0;
@@ -1340,7 +1366,6 @@ DIV.meneame SPAN.disabled {
 	background: 0 0;
 	color: white;
 	display: block;
-	font-weight: 400;
 	line-height: 0.94rem;
 	text-indent: 0.6rem;
 	text-decoration: none
@@ -1359,7 +1384,7 @@ DIV.meneame SPAN.disabled {
 .sidenav-link-title {
 	display: block;
 	padding: 0 0.16rem 0 0.4rem;
-	font-size: 0.32rem;
+	font-size: 0.34rem;
 }
 
 .sidenav-dropdown {
@@ -1374,8 +1399,8 @@ DIV.meneame SPAN.disabled {
 
 .sidenav-dropdown a {
 	/*background: #191919;*/
-	padding-left: 0.72rem;
-	font-size: 0.28rem;
+	padding-left: 19%;
+	font-size: 0.3rem;
 	color: black;
 }
 

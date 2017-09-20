@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>九动体育</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
 		<script>!function(e){function t(a){if(i[a])return i[a].exports;var n=i[a]={exports:{},id:a,loaded:!1};return e[a].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.flex=function(e,t){var a=e||100,n=t||1,r=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),c=l&&parseInt(l[1].split(".").join(""),10)>=80,p=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),s=i.devicePixelRatio||1;p||d&&d[1]>534||c||(s=1);var u=1/s,m=r.querySelector('meta[name="viewport"]');m||(m=r.createElement("meta"),m.setAttribute("name","viewport"),r.head.appendChild(m)),m.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+u+",maximum-scale="+u+",minimum-scale="+u),r.documentElement.style.fontSize=a/2*s*n+"px"},e.exports=t["default"]}]); flex(100, 1);</script>
 	</head>
 
@@ -12,7 +13,7 @@
 		<!--头部-->
 		<div class="header">
 			<div class="header-top">
-				<div class="header-top-middle">
+				
 					<a href="index.html"><img src="img/logo.png" /></a>
 					<img src="img/logo-2.png" alt="" />
 					<a href="###" class="postion01">
@@ -21,7 +22,7 @@
 					<div class="banner-right-icon" id="sidenav-toggle">
 						<img src="img/ico-01.png"/>
 					</div>
-				</div>
+				
 			</div>
 			
 			
@@ -107,12 +108,10 @@
 		<div class="content">
 			<div class="content-head">
 				<div class="content-head-middle">
-					<!--<a href=""><span class="content-head-middle-spa01"></span><span class="content-head-middle-spa02">师资概况</span><span class="content-head-middle-spa03"></span></a>
-					<a href=""><span class="content-head-middle-spa01 content-head-middle-focus"></span><span class="content-head-middle-spa02  content-head-middle-focus">师资力量</span><span class="content-head-middle-spa03  content-head-middle-focus"></span></a>-->
-					<div class="content-head-middle-right">
-						首页 >
-						<span>关于我们</span>
-					</div>
+					<dl class="content-head-middle-right">
+						<dd><a href="">首页 ></a></dd>
+						<dd><a href="">关于我们</a></dd>
+					</dl>
 
 				</div>
 
@@ -190,11 +189,9 @@
 
 		<!--底部-->
 		<div class="footer">
-			<div class="footer-list">
-				
-				<a href="###">PC端</a>
+			
 				<a href="###" id="goTopBtn" class="goTopBtn">返回顶部</a>
-			</div>
+			
 			<div class="footer-support">
 				<div class="footer-support-middle">
 					<span>Copyright © 南昌市九动体育有限公司    版权所有</span>
@@ -205,9 +202,8 @@
 		</div>
 
 	</body>
-	<script src="js/jquery-1.7.1.min.js"></script>
-	<script src="js/jquery.flexslider-min.js"></script>
-	<script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+	
+	
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>$('[data-sidenav]').sidenav();</script>
 
