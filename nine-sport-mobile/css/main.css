@@ -280,9 +280,11 @@ button {
 
 .show-head .tel02{
 	 background:url(../img/tel-01.png) no-repeat;
+	 background-size: auto 100%;
 	 float: right;
-	 padding-left: 0.6rem;	 
+	 padding-left: 0.8rem;	 
 	 height: 0.68rem;
+	 line-height: 0.68rem;
 }
 
 
@@ -864,42 +866,24 @@ button {
 	
 }
 
-.content-article-about-down ul li{
-	
+.content-article-about-down ul li{	
 	width: 46.1%;
 	height: 3.45rem;
 	margin-bottom: 0.4rem;	
 	background-color: white;
 }
 
-.about-down-l01{
-	background: url(../img/about-down-01.png) no-repeat center;
-	background-position-y: 30%;
-	background-size: 30%;
-}
-
-.about-down-l02{
-	background: url(../img/about-down-02.png) no-repeat center;
-	background-position-y: 30%;
-		background-size: 30%;
-}
-
-.about-down-l03{
-	background: url(../img/about-down-03.png) no-repeat center;
-	background-position-y: 30%;
-		background-size: 30%;
-}
-
-.about-down-l04{
-	background: url(../img/about-down-04.png) no-repeat center;
-	background-position-y: 30%;
-		background-size: 30%;
+.content-article-about-down ul li img{
+	display: block;
+	
+	height: 1rem;
+	margin: 0.5rem auto 0.3rem;
 }
 
 .about-down-title{
 	text-align: center;
 	font-size: 0.3rem;
-	margin-top: 1.8rem;
+	/*margin-top: 0.8rem;*/
 	font-weight: bold;
 }
 
@@ -1353,7 +1337,7 @@ DIV.meneame SPAN.disabled {
 .sidenav-menu {
 	list-style: none;
 	margin: 0;
-	padding: 0
+	padding-bottom: 3rem;
 }
 
 .sidenav-menu li {
