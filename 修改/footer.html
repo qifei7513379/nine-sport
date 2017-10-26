@@ -1,0 +1,107 @@
+<!--飘窗-->
+		
+		<!--左侧飘窗-->
+		<div class="banner-left">
+			<div class="banner-left-head">
+				考场免费模拟测试报名中（每月限100人）
+			</div>
+			<ul>
+				<form action="{:url('news/baoming')}" method="post">
+					<li><input type="text" name="name" placeholder="姓名" required="required"/></li>
+					<li><input type="text" name="tel" placeholder="手机" required="required"/></li>
+					<li><input type="text" name="school" placeholder="学校" required="required"/></li>
+					<li><input type="text" name="addr" placeholder="学校地址" required="required"/></li>
+					<li><input type="submit" class="banner-left-sub" value="申请免费模拟测试"/></li>
+				</form>
+			</ul>
+		</div>
+		
+		<!--右侧飘窗-->
+		
+		<div class="banner-right" id="banner-right">
+			<ul>
+				<li class="banner-right-qq" id="banner-right-qq">
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=963186233&site=%E4%B9%9D%E5%8A%A8%E4%BD%93%E8%82%B2&menu=yes" target="_blank">
+						<div class="">
+						QQ
+						</div>
+					</a>
+				</li>
+				<li class="banner-right-weixin">
+					<div class="title03">
+						二维码
+					</div>
+					<div class="erweima02">
+						
+					</div>
+				</li>
+				<li class="banner-right-up" id="goTopBtn">
+					<div class="">
+						返回顶部
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+		
+
+		
+		
+		
+
+		<!--底部-->
+		<div class="footer">
+			<div class="footer-list">
+				<div class="footer-list-middle">
+					{volist name="cateres_foot" id="vo"}
+					<dl>
+						<dt>{$vo.catename}</dt>
+
+						{if condition="$vo.children neq 0"}
+
+							{volist name="$vo.children" id="vo2"}
+							<dd>
+								<a href="{:url('news/index',array('pid'=>$vo['id'],'cateid'=>$vo2['id']))}">{$vo2.catename}</a>
+							</dd>
+							{/volist}
+
+
+						{else /}
+
+						<dd>
+							<a href="{:url('news/index',array('cateid'=>$vo['id']))}">{$vo.catename}</a>
+						</dd>
+
+						{/if}
+
+					</dl>
+
+
+
+
+
+					{/volist}
+
+
+					<dl>
+						<dt>联系我们</dt>
+						<dd>地址：{$confres.address}</dd>
+						<dd>电话：{$confres.tel}</dd>
+						<dd>邮箱：{$confres.email}</dd>
+					</dl>
+					<div class="erweima">
+						<img src="__INDEX__/img/guanzhu.png" />
+						<div>关注我们</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-support">
+				<div class="footer-support-middle">
+					<span>{$confres.copyright} {$confres.icp} | 技术支持：云端科技</span>
+				</div>
+
+			</div>
+		</div>
+		<script src="__INDEX__/js/jquery-1.7.1.min.js"></script>	
+		<script type="text/javascript" src="__INDEX__/js/main.js"></script>
+

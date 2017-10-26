@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{$confres.sitename}-{$cateinfo.catename}</title>
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/main.css" />
+</head>
+
+<body>
+{include file="public/head"/}
+
+<!--内容-->
+
+<div class="title-banner">
+    <div class="title-banner-text">
+        <div class="title-banner-text01">{$cateinfo.enname}</div>
+        <div class="title-banner-text02">{$cateinfo.catename}</div>
+    </div>
+
+</div>
+<div class="content">
+    <div class="content-head">
+        <div class="content-head-middle">
+            {notempty name="left"}
+            {//子类不为空的时候做循环}
+            {volist name="left" id="vo"}
+            <a href="{:url('news/index',array('pid'=>$pid,'cateid'=>$vo['id']))}">
+                <span class="content-head-middle-spa01 {if condition="$Request.param.cateid eq $vo.id" }content-head-middle-focus{/if}"></span>
+                <span class="content-head-middle-spa02 {if condition="$Request.param.cateid eq $vo.id" }content-head-middle-focus{/if} ">{$vo.catename}</span>
+                <span class="content-head-middle-spa03 {if condition="$Request.param.cateid eq $vo.id" }content-head-middle-focus{/if}"></span>
+            </a>
+
+            {/volist}
+            {/notempty}
+            <div class="content-head-middle-right">
+                当前页面 &nbsp;-&nbsp;
+                <a href="">{$cateinfo.catename}</a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="content-article">
+        <ul class="teacher-list">
+            {volist name="articleres" id="vo"}
+
+            <li>
+                <a href="###" class="big-link" data-reveal-id="myModal" data-animation="fade" vid="{$vo.id}">
+
+                    <img src="{$vo.thumb}" class="teacher-photo"/>
+
+                    <div class="teacher-name">
+                        {$vo.title}
+                    </div>
+                    <div class="teacher-job">
+                        {$vo.en_name}
+                    </div>
+                    <div class="teacher-introduce">
+                        {$vo.desc|mb_substr=###,0,80,'utf-8'}
+                        {gt name="$vo.desc|mb_strlen=###,'utf-8'" value="80"}
+                        ...
+                        {/gt}
+                    </div>
+                </a>
+
+            </li>
+            {/volist}
+
+
+        </ul>
+    </div>
+    <div class="content-footer">
+        <p>
+        <div class="meneame">
+        {$page}
+        </div>
+        </p>
+
+    </div>
+
+</div>
+
+<div id="myModal" class="reveal-modal">
+
+
+
+</div>
+
+{include file="public/footer"/}
+<script src="__INDEX__/js/jquery.reveal.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).ready(function(){
+        $('a[data-reveal-id]').live('click', function(e) {
+            e.preventDefault();
+
+            var vid = $(this).attr('vid');
+            $.ajax({
+                type:"post",
+                dataType:"json",
+                data:{id:vid},
+                url:"{:url('News/shizililiang')}",
+                success:function(data){
+
+                    var html = '';
+                    html += '<img src="'+data.thumb+'" class="teacher-photo"/>';
+                    html += '<div class="teacher-name">';
+                    html += ''+data.title+'';
+                    html += '</div>';
+                    html += '<div class="teacher-introduce">';
+                    html += ''+data.desc+'';
+                    html += '</div>';
+                    html += '<a class="close-reveal-modal" onclick="clo();">&#215;</a>';
+                    $("#myModal").html(html);
+
+                }
+            });
+
+
+            var modalLocation = $(this).attr('data-reveal-id');
+            $('#'+modalLocation).reveal($(this).data());
+
+        });
+        
+        $("#myModal").css('top','150');
+
+    });
+
+    function clo(){
+        $(".reveal-modal-bg").css('display','none');
+        $("#myModal").css('visibility','hidden');
+        
+    }
+
+</script>
+
+</body>
+
+
+</html>

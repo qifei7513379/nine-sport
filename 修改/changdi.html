@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{$confres.sitename}-{$cateinfo.catename}</title>
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/main.css" />
+</head>
+
+<body>
+{include file="public/head"/}
+
+<!--内容-->
+
+<div class="title-banner">
+    <div class="title-banner-text">
+        <div class="title-banner-text01">{$cateinfo.enname}</div>
+        <div class="title-banner-text02">{$cateinfo.catename}</div>
+    </div>
+</div>
+<div class="content">
+    <div class="content-head">
+        <div class="content-head-middle">
+            <!--<a href=""><span class="content-head-middle-spa01"></span><span class="content-head-middle-spa02">师资概况</span><span class="content-head-middle-spa03"></span></a>
+            <a href=""><span class="content-head-middle-spa01 content-head-middle-focus"></span><span class="content-head-middle-spa02  content-head-middle-focus">师资力量</span><span class="content-head-middle-spa03  content-head-middle-focus"></span></a>-->
+            <div class="content-head-middle-right">
+                当前页面 &nbsp;-&nbsp;
+                <a href="">{$cateinfo.catename}</a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="content-article">
+        <ul class="field-list">
+            {volist name="articleres" id="vo"}
+
+            <li>
+                <a href="###" class="big-link" data-reveal-id="myModal" data-animation="fade" vid="{$vo.id}">
+                    <img src="{$vo.thumb}" class="field-photo"/>
+                    <div class="field-name">
+                        {$vo.title}
+                    </div>
+
+                </a>
+                <ul>
+                    <li>地址：{$vo.address}</li>
+                    <li>电话：{$vo.tel}</li>
+                    <li>联系人：{$vo.contact}</li>
+                </ul>
+
+            </li>
+            {/volist}
+
+
+
+        </ul>
+    </div>
+    <div class="content-footer">
+        <p>
+        <div class="meneame">{$page}
+        </div>
+        </p>
+
+    </div>
+
+</div>
+
+<!--弹出层-->
+
+<div id="myModal" class="reveal-modal">
+
+    <img src="img/field-01.png" class="field-photo"/>
+
+    <div class="field-name">
+        南昌市九动体育馆
+    </div>
+    <div class="field-introduce">
+        该场馆毕业于洛阳师范体育学院体育系，就读期间各项体育指标拔尖，为大家所熟知，该教练毕业于洛阳师范体育学院体育系，就读期间各项体育指标拔尖，为大家所熟知，该教练毕业于洛阳师范体育学院体育系，就读期间各项体育指标拔尖，为大家所熟知，该教练毕业于洛阳师范体育学院体育系，就读期间各项体育指标拔尖，为大家所熟知，该教练毕业于洛阳师范体育学院体育系，就读期间各项体育指标拔尖，为大家所熟知，该教练毕业于洛阳师范体育学院体育系，就读期间各项体育指标拔尖，为大家所熟知，通过河大体育学院的深造，毕业之后，学以致用...
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+{include file="public/footer"/}
+<script src="__INDEX__/js/jquery.reveal.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).ready(function(){
+        $('a[data-reveal-id]').live('click', function(e) {
+            e.preventDefault();
+
+            var vid = $(this).attr('vid');
+            $.ajax({
+                type:"post",
+                dataType:"json",
+                data:{id:vid},
+                url:"{:url('News/shizililiang')}",
+                success:function(data){
+
+                    var html = '';
+                    html += '<img src="'+data.thumb+'" class="teacher-photo"/>';
+                    html += '<div class="teacher-name">';
+                    html += ''+data.title+'';
+                    html += '</div>';
+                    html += '<div class="teacher-introduce">';
+                    html += ''+data.desc+'';
+                    html += '</div>';
+                    html += '<a class="close-reveal-modal" onclick="clo();">&#215;</a>';
+                    $("#myModal").html(html);
+
+                }
+            });
+
+
+            var modalLocation = $(this).attr('data-reveal-id');
+            $('#'+modalLocation).reveal($(this).data());
+        });
+
+        $("#myModal").css('top','150');
+
+    });
+
+    function clo(){
+        $(".reveal-modal-bg").css('display','none');
+        $("#myModal").css('visibility','hidden');
+        $("#myModal").css({'top': parseInt($("#myModal").css('top'))-$(document).scrollTop(), 'opacity' : 0, 'visibility' : 'none'});
+    }
+
+</script>
+</body>
+
+
+</html>

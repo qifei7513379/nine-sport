@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<style>
+.ggl-a{width:420px; font-size:12px; line-height:20px; text-align:left; background-color:#0e82cf; padding:10px;color: #fff;}
+.ggl-a h2{font-size:15px; line-height:20px; text-align:center;margin-bottom: 10px;}
+	.ggl-a .p{ line-height:20px; margin:0px; padding:0px;}
+.ggl-a .p2{text-align:right;}
+.ggl-a h3{padding:10px 0px; margin:0px; text-align:right;}
+.ggl-b{position:absolute; top:8px; right:8px; cursor:pointer;color: #fff;}
+</style>
+<div id="ggl" style="width: 440px; height: 240px; position: absolute; z-index: 9999; left: 438px; top: 356px;">
+    <div class="ggl-a">
+            <h2>建设行业专业人员培训收费标准公告</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;根据省住房城乡建设厅《关于做好住房城乡建设行业专业人员教育培训工作的通知》(赣建人【2016】21号)和省发改委《关于我省建设领域现场专业人员培训收费有关问题的复函》(赣发改收费【2016】920号)文件要求，我校在确保收费稳定的基础上，秉承为企业服务的宗旨，尊重学员自主选择的意愿，在公开透明、便捷、高效的前提下，努力做好培训工作。现将相关培训费用标准公示如下：
+		<p>1、建筑施工企业八大员培训费按860元/员收取；</p>
+		<p>2、建设行业技能人员培训费按中级工260元/人，高级工380元/人收取。</p>
+		<p>监督电话：0791-85715020</p>
+    <h3>南昌中恒建设职业技术培训学校</h3>
+    <p class="p2"> 2016年12月8日 </p>
+    </div>
+   <div class="ggl-b">X</div>
+</div>
+<script type="text/javascript">
+var ggggl = {
+ggl: document.getElementById("ggl"),
+speed: 20,
+statusX: 1,
+statusY: 1,
+x: 100,
+y: 300,
+winW: document.documentElement.clientWidth - document.getElementById("ggl").offsetWidth,
+winH: document.documentElement.clientHeight - document.getElementById("ggl").offsetHeight,
+Go: function () {
+this.ggl.style.left = this.x + 'px';
+this.ggl.style.top = this.y + 'px';
+
+this.x = this.x + (this.statusX ? -1 : 1)
+if (this.x < 0) { this.statusX = 0 }
+if (this.x > this.winW) { this.statusX = 1 }
+
+this.y = this.y + (this.statusY ? -1 : 1)
+if (this.y < 0) { this.statusY = 0 }
+if (this.y > this.winH) { this.statusY = 1 }
+}
+}
+var interval = setInterval("ggggl.Go()", ggggl.speed);
+ggggl.ggl.onmouseover = function () { clearInterval(interval) };
+ggggl.ggl.onmouseout = function () { interval = setInterval("ggggl.Go()", ggggl.speed) };
+/**单击关闭**/
+$(document).ready(function(){
+   $(".ggl-b").click(function(){ 
+    $("#ggl").css("display","none");  
+ 	}); 	   
+});
+</script>
+	</body>
+</html>
